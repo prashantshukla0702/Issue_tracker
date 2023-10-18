@@ -1,0 +1,21 @@
+<!-- list of project,author and their description -->
+<div class="container-fluid project-wrapper" style="background-color: #58c6c0">
+  <div class="row">
+    <% projects.forEach((project) => { %>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="project-name text-start"><%= project.name %></h3>
+          <p class="project-desc text-left text-muted">
+            <%= project.description %>
+          </p>
+        </div>
+        <div class="card-footer">
+          <a href="/project/<%= project.id %>" class="project-nav"> </a>
+          <span class="author"><%= project.author %></span>
+        </div>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+</div>

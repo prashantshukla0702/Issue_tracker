@@ -1,0 +1,47 @@
+<% if(flash.success && flash.success.length > 0){ %>
+<!-- Display the success message after inserting Issue into db-->
+<div
+  class="alert alert-success alert-dismissible fade show w-50 m-auto"
+  role="alert"
+>
+  <%= flash.success %>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+<% } %>
+<!-- Form to create a Issue -->
+<div class="project-head"></div>
+<div class="container my-5">
+  <form action="/issue/store/" class="w-50 m-auto" method="post">
+    <div class="form-group">
+      <div class="row my-3">
+        <div class="col-md-6">
+          <label for="title" class="form-label"> Title </label>
+          <input type="hidden" name="pid" value="<%= pid %>" />
+          <input type="text" class="form-control" id="title" name="title" />
+        </div>
+        <div class="col-md-6">
+          <label for="author" class="form-label"> Author </label>
+          <input type="text" class="form-control" id="author" name="author" />
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col-md-12">
+          <label for="desc" class="form-label">Labels</label>
+          <input type="text" class="form-control" id="label" name="label" />
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col-md-12">
+          <label for="desc" class="form-label">Description</label>
+          <input type="text" class="form-control" id="desc" name="desc" />
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success">Create</button>
+    </div>
+  </form>
+</div>

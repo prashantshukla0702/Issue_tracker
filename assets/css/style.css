@@ -1,0 +1,88 @@
+/* Home page css */
+.project-wrapper {
+  min-height: 78vh;
+  padding: 50px 100px;
+}
+.project-name {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #59c6c0;
+}
+.project-desc {
+  font-size: 18px;
+  font-weight: 400;
+}
+.project-wrapper .card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* project card navigation buttons */
+.project-nav {
+  height: 50px;
+  display: block;
+  width: 50px;
+  border-radius: 50%;
+  background: #59c6c05e;
+  position: relative;
+}
+a.project-nav:before {
+  content: "\2192";
+  position: absolute;
+  text-align: center;
+  color: #279f98;
+  top: -7px;
+  left: 20%;
+  font-size: 35px;
+}
+.btn-secondary {
+  border: 0px;
+  border-radius: 0px;
+  padding: 5px 40px;
+  font-size: 16px;
+}
+.project-wrapper .row {
+  gap: 40px 0px;
+}
+footer {
+  padding: 40px 20px;
+}
+/* footer social media icons */
+.social-links {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 35px;
+  float: right;
+  margin: 30px 0px;
+}
+/* View Project page css */
+.view-project-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 0px 30px;
+}
+/* Search box */
+input#search {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+}
+input#search:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .project-wrapper {
+    min-height: 78vh;
+    padding: 50px 50px;
+  }
+  .social-links {
+    float: left;
+    margin: 15px 0px;
+  }
+}
